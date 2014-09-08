@@ -42,15 +42,14 @@ public final class R {
         public static final int dtAsis=0x7f090022;
         public static final int dtDias=0x7f090020;
         public static final int dtInasis=0x7f090021;
-        public static final int editText1=0x7f09001c;
         public static final int lblAsis=0x7f09000e;
         public static final int lblInas=0x7f090010;
         public static final int lblMedia=0x7f090012;
         public static final int lblPor=0x7f090014;
         public static final int lblTotalAlum=0x7f090006;
         public static final int scrollView1=0x7f090000;
-        public static final int spinner1=0x7f090002;
         public static final int spinner2=0x7f090004;
+        public static final int spinnerEditar=0x7f090002;
         public static final int textView1=0x7f090001;
         public static final int textView10=0x7f090013;
         public static final int textView2=0x7f090003;
@@ -59,6 +58,7 @@ public final class R {
         public static final int txtAsisM=0x7f090009;
         public static final int txtCantalu=0x7f090019;
         public static final int txtDias=0x7f090008;
+        public static final int txtEdit=0x7f09001c;
         public static final int txtInas=0x7f09000a;
         public static final int txtNomcur=0x7f090018;
         public static final int txtPor=0x7f09000d;

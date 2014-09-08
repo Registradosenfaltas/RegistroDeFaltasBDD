@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 		lblInas = (TextView) findViewById(R.id.lblInas);
 		lblMedia = (TextView) findViewById(R.id.lblMedia);
 		lblPor = (TextView) findViewById(R.id.lblPor);
-		spinner1 = (Spinner) findViewById(R.id.spinner1);
+		//spinner1 = (Spinner) findViewById(R.id.spinnerEditar);
 
 	}
 
