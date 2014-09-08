@@ -8,18 +8,21 @@
         android:id="@+id/btnCrear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="irCrear"
         android:text="Crear curso" />
 
     <Button
         android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="irEditar"
         android:text="Editar cursos" />
 
     <Button
         android:id="@+id/btnContinuar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="irMain"
         android:text="Continuar" />
 
 </LinearLayout>

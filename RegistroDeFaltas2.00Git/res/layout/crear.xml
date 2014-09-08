@@ -34,16 +34,26 @@
         android:ems="10"
         android:inputType="number" />
 
-    <Button
-        android:id="@+id/btnGuardarC"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar" />
+        android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/btnAtrasC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Atras" />
+        <Button
+            android:id="@+id/btnAtrasC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onAtrasC"
+            android:text="Atras" />
+
+        <Button
+            android:id="@+id/btnGuardarC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCrear"
+            android:text="Guardar" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -16,13 +16,15 @@
         <activity
             android:name="com.registrodefaltas.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
+        </activity>
+        <activity android:name="ResultadoActivity"></activity>
+        <activity android:name="Crear"></activity>
+        <activity android:name="Editar"></activity>
+        <activity android:name="Inicio"><intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="ResultadoActivity"></activity>
+            </intent-filter></activity>
     </application>
 
 </manifest>

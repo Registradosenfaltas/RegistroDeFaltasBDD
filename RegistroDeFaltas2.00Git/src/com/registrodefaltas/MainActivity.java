@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	public void calcular(View view) {
+	public void onCalcGuard(View view) {
 
 		sAlum = txtAlum.getText().toString();
 		sDias = txtDias.getText().toString();
@@ -112,6 +112,28 @@ public class MainActivity extends Activity {
 					Toast.LENGTH_SHORT).show();
 		}System.out.println("hasta aca anda 3");
 	}
+	
+	public void calcular(View view) {
+
+		sAlum = txtAlum.getText().toString();
+		sDias = txtDias.getText().toString();
+		sInas = txtInas.getText().toString();
+
+		int iAlum = Integer.parseInt(sAlum);
+		int iDias = Integer.parseInt(sDias);
+		float iInas = Float.parseFloat(sInas);
+		int asis = (int) ((iAlum * iDias) - iInas);
+		float asist = asis;
+		float media = asist / iDias;
+		float por = (asist * 100) / (iAlum * iDias);
+		lblAsis.setText(asist + "");
+		lblInas.setText("" + iInas);
+		lblMedia.setText("" + media + " %");
+		lblPor.setText("" + por + " %");
+		
+	}
+		
+	
 
 	public void limpiar(View view) {
 
@@ -136,5 +158,10 @@ public class MainActivity extends Activity {
 							// actividad
 
 	}
+	
+	public void onAtrasA(View view) {
+        Intent i = new Intent(this, Inicio.class );
+        startActivity(i);
+  }
 
 }

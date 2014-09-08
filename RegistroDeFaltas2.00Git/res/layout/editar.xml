@@ -33,16 +33,25 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/btnGuardarE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Guardar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/btnAtrasE"
-        android:layout_width="78dp"
-        android:layout_height="wrap_content"
-        android:text="Atras" />
+        <Button
+            android:id="@+id/btnAtrasE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onAtrasE"
+            android:text="Atras" />
+
+        <Button
+            android:id="@+id/btnGuardarE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onGuardarE"
+            android:text="Guardar" />
+    </LinearLayout>
 
 </LinearLayout>

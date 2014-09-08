@@ -27,21 +27,22 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090023;
-        public static final int btn1=0x7f090022;
+        public static final int action_settings=0x7f090024;
+        public static final int btn1=0x7f090023;
         public static final int btnAtrasC=0x7f09001a;
         public static final int btnAtrasE=0x7f09001d;
-        public static final int btnContinuar=0x7f090016;
-        public static final int btnCrear=0x7f09001e;
-        public static final int btnEditar=0x7f090015;
-        public static final int btnGuardarC=0x7f090019;
-        public static final int btnGuardarE=0x7f09001c;
+        public static final int btnContinuar=0x7f090017;
+        public static final int btnCrear=0x7f09001f;
+        public static final int btnEditar=0x7f090016;
+        public static final int btnGuardarC=0x7f09001b;
+        public static final int btnGuardarE=0x7f09001e;
         public static final int button1=0x7f09000c;
+        public static final int button2=0x7f090015;
         public static final int datos=0x7f09000b;
-        public static final int dtAsis=0x7f090021;
-        public static final int dtDias=0x7f09001f;
-        public static final int dtInasis=0x7f090020;
-        public static final int editText1=0x7f09001b;
+        public static final int dtAsis=0x7f090022;
+        public static final int dtDias=0x7f090020;
+        public static final int dtInasis=0x7f090021;
+        public static final int editText1=0x7f09001c;
         public static final int lblAsis=0x7f09000e;
         public static final int lblInas=0x7f090010;
         public static final int lblMedia=0x7f090012;
@@ -56,10 +57,10 @@ public final class R {
         public static final int textView5=0x7f09000f;
         public static final int textView6=0x7f090011;
         public static final int txtAsisM=0x7f090009;
-        public static final int txtCantalu=0x7f090018;
+        public static final int txtCantalu=0x7f090019;
         public static final int txtDias=0x7f090008;
         public static final int txtInas=0x7f09000a;
-        public static final int txtNomcur=0x7f090017;
+        public static final int txtNomcur=0x7f090018;
         public static final int txtPor=0x7f09000d;
         public static final int txtTInas=0x7f090007;
         public static final int txtTasis=0x7f090005;
@@ -68,7 +69,7 @@ public final class R {
         public static final int activity_main=0x7f030000;
         public static final int crear=0x7f030001;
         public static final int editar=0x7f030002;
-        public static final int principal=0x7f030003;
+        public static final int inicio=0x7f030003;
         public static final int resultado=0x7f030004;
     }
     public static final class menu {
@@ -77,7 +78,6 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
     }
     public static final class style {
         /** 

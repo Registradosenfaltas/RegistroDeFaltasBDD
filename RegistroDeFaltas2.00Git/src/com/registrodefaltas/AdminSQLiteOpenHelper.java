@@ -17,6 +17,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		db.execSQL("Create table if not exists datos(mes text, inasistencias text, dias text, asistencias integer)");
+		db.execSQL("Create table if not exists cursos(nombre text, cantidad integer)");	
 		
 	}
 
@@ -24,6 +25,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 	public void onUpgrade(SQLiteDatabase db, int versionAnte, int versionNue) {
 		// TODO Auto-generated method stub
 		db.execSQL("drop table if exists datos");
-		db.execSQL("Create table if not exists datos(mes text, inasistencias text, dias text, asistencias integer)");	}
+		db.execSQL("Create table if not exists datos(mes text, inasistencias text, dias text, asistencias integer)");	
+		db.execSQL("Create table if not exists cursos(nombre text, cantidad integer)");	}
 
 }
