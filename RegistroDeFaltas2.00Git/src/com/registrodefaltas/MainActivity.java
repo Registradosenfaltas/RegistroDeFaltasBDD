@@ -6,23 +6,26 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	private Spinner spinner1;
+	private Spinner spinnerPrincipal;
 	// private String contenidoAsis,contenidoInas, contenidoMedia,
 	// contenidoPor;//Aquí guardaremos el contenido del cuadro de texto para
 	// pasarselo a la siguiente actividad
 	private EditText txtAlum, txtDias, txtInas;
 	private TextView lblAsis, lblInas, lblMedia, lblPor;
 	private String sAlum, sDias, sInas;
+	private SQLiteDatabase db;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +33,31 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		crearTabla();
 		//borrarcrearTabla();
+		txtAlum = (EditText) findViewById(R.id.txtAlum);
 		txtDias = (EditText) findViewById(R.id.txtDias);
 		txtInas = (EditText) findViewById(R.id.txtInas);
 		lblAsis = (TextView) findViewById(R.id.lblAsis);
 		lblInas = (TextView) findViewById(R.id.lblInas);
 		lblMedia = (TextView) findViewById(R.id.lblMedia);
 		lblPor = (TextView) findViewById(R.id.lblPor);
-		//spinner1 = (Spinner) findViewById(R.id.spinnerEditar);
+		spinnerPrincipal = (Spinner) findViewById(R.id.spinnerPrincipal);
+		
+		AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"cursos", null, 1);
+		db = admin.getWritableDatabase();
+		System.out.println("hasta aca anda 0.5");
+    
+		Cursor cur = db.rawQuery("SELECT nombre as _id, nombre FROM cursos", null);
+		System.out.println("hasta aca anda 1");
+	
+		String[] from = new String[] { "nombre" };
+        int[] to = new int[] { android.R.id.text1 };
+        System.out.println("hasta aca anda 2");
+        
+        SimpleCursorAdapter mAdapter = 
+       		new SimpleCursorAdapter(this,android.R.layout.simple_spinner_item, cur, from, to);
+        		        mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        		        spinnerPrincipal.setAdapter(mAdapter);
+        		        System.out.println("hasta aca anda 3");
 
 	}
 
@@ -68,7 +89,7 @@ public class MainActivity extends Activity {
 			AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
 					"datos", null, 1);
 			SQLiteDatabase bd = admin.getWritableDatabase();
-			String selec = spinner1.getSelectedItem().toString();
+			String selec = spinnerPrincipal.getSelectedItem().toString();
 			ContentValues registro = new ContentValues();
 			registro.put("mes", selec);
 			registro.put("inasistencias", sInas);
